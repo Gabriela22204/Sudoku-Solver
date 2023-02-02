@@ -23,5 +23,5 @@ These empty values are represented by -1, so for example:
  ...
  ```
  
- So, this code is to solve the sudoku puzzle using Python :D
+ So, this is a code to solve the sudoku puzzle using Python :D
 
