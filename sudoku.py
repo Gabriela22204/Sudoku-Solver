@@ -18,6 +18,7 @@ def is_valid(puzzle, guess, row, col):
         return False
     
     # now the column
+    
     # col_vals = []
     # for i in range(9):
     #     col_vals.append(puzzle[i][col])
