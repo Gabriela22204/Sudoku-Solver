@@ -6,11 +6,14 @@ To finish sudoku, we need to fill the empty spaces with 0-9 numbers. The same oc
 
 These empty values are represented by -1, so for example:
 
+```
+
 [[-1,  1,  5, ...],
  [-1, -1, -1, ...],
  [ 3, 2, -1, ...]
  ...]
  
+ ```
  would represent a board like this:
  
   -----------
