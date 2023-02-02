@@ -1,6 +1,6 @@
-# Sudoku Solver
+# Sudoku Solver Puzzle
 
-This is a sudoku solver using a backtracking
+This is a sudoku solver puzzle using a backtracking
 
 To finish sudoku, we need to fill the empty spaces with 0-9 numbers. The same occurs on the row, column and squares (3x3)
 
