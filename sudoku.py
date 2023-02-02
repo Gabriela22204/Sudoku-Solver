@@ -2,7 +2,6 @@ def find_next_empty(puzzle):
     # finds the next row, col on the puzzle that's not filled yet --> rep with -1
     # return row, col tuple (or (None, None) if there is none)
     
-    # keep in mind that we are using 0-8 for our indicices
     for r in range(9):
         for c in range(9):
             if puzzle[r][c] == -1:
@@ -11,9 +10,9 @@ def find_next_empty(puzzle):
 
 def is_valid(puzzle, guess, row, col):
     # figures out whether the guess at the row/col of the puzzle is a valid guess
-    # returns ture if is valid, false otherwise
+    # returns true if is valid, false otherwise
     
-    # let's start with the row:
+    # start with the row:
     row_vals = puzzle[row]
     if guess in row_vals:
         return False
@@ -27,7 +26,7 @@ def is_valid(puzzle, guess, row, col):
         return False
     
     # and then the square
-    # this is tricky, but we want to get where the 3x3 square stars
+    # 3x3 square stars
     # and iterate over the 3 values in the row/column
     row_start = (row // 3) * 3
     col_start = (col // 3) * 3
@@ -37,12 +36,11 @@ def is_valid(puzzle, guess, row, col):
             if puzzle[r][c] == guess:
                 return False
             
-    # if we get here, these ckecks pass
+    # if get here, these ckecks pass
     return True
     
 def solve_sudoku(puzzle):
-    # solve sudoku using a backtracking!
-    # our puzzle is a list of lists, where each inner list is a row in our sudoku puzzle
+    # solve sudoku using a backtracking
     # return whether a solution exists
     # mutates puzzle to be the solution (if solution exists)
     
@@ -54,7 +52,7 @@ def solve_sudoku(puzzle):
         return True
     
     # step 2: if there is a place to put a number, then make a guess between 1 and 9
-    for guess in range(1, 10): # range(1, 10) is 1, 2, 3, ... 9
+    for guess in range(1, 10):
         # step 3: check if this is valid guess
         if is_valid(puzzle, guess, row, col):
             # step 3.1: if this is valid then place that guess on the puzzle!
